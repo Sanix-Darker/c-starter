@@ -118,3 +118,7 @@ If you want to create a C-Lib library, you just have to put in the root of your 
 ## Author
 
 - Sanix-darker
+
+## LICENSE
+
+[MIT License](https://github.com/Sanix-Darker/c-starter/blob/master/LICENSE)
