@@ -3,4 +3,8 @@
 
 void test_function();
 
-var func();
+var cello_struct();
+
+var addition();
+
+var test_tables();
