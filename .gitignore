@@ -1,2 +1,5 @@
 *.bin
 .history
+dist
+.vscode
+.idea

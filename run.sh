@@ -1,1 +1,1 @@
-./app.bin
+./dist/app.bin

@@ -1,40 +1,12 @@
-#include "./headers/main.h"
+#include "./headers/func.h"
 
 struct Example_struct {
   float x, y;
 };
 
-int main(int argc, char** argv) {
-
-  const int x = 1;
-  unsigned int i=0;
-
-  for (i = 1; i < 11; ++i)
-  {
-    printf("%d ", i);
-  }
-  
-  // Cello struct
-  cello_struct();
-
-  // Addition
-  addition();
-
-  // Simple test function
-  test_function();
-
-  // A Cello base function
-  test_tables();
-
-  try {
-    // Made an addition
-    printf("\n[x] try-cactch in C");
-  } catch (e in IOError) {
-    println("[+] Error occur...");
-  }
-
-  println("");
-  return 1;
+char* hello(){
+  char *sentence = "Hello World !!!";
+  return sentence;
 }
 
 void test_function(){
@@ -45,7 +17,7 @@ void test_function(){
   printf("<<< Welcome %s\n", name);
 }
 
-var test_tables(){
+var test_tables(void){
   var prices = new(Table, String, Int);
   set(prices, $S("Apple"),  $I(12)); 
   set(prices, $S("Banana"), $I( 6)); 
@@ -56,6 +28,7 @@ var test_tables(){
     var val = get(prices, key);
     print("Price of %$ is %$\n", key, val);
   }
+  return 0;
 }
 
 /**
@@ -67,6 +40,8 @@ var addition(){
   var total = $I(c_int(i0) + c_int(i1));
 
   println("[+] %$ + %$ = %i", i0, i1, total);
+  
+  return 0;
 }
 
 /**
@@ -87,6 +62,8 @@ var cello_struct(){
   ** hash: 2849275892l
   */ 
   print("\np0: %$\np1: %$\ncmp: %i\nhash: %ul\n", p0, p1, $I(cmp(p0, p1)), $I(hash(p0)));
+
+  return 0;
 }
 
 /** Expected output

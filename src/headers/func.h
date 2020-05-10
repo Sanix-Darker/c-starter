@@ -8,3 +8,5 @@ var cello_struct();
 var addition();
 
 var test_tables();
+
+char* hello();

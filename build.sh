@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-# on Linux
-gcc -std=gnu99 ./c_app/main.c -lCello -lm -lpthread -o app.bin
+# on Linux (Debian/Uuntu)
+# We check the dist dir and create it if doesn't exist
+rm -rf dist
+mkdir dist
+# We compile the main source
+gcc -std=gnu99 ./src/main.c -Wall ./src/func.c -lCello -lm -lpthread -o ./dist/app.bin
 
 # On Windows
-# gcc -std=gnu99 ./c_app/main.c -lCello -lDbgHelp -o app.bin
+# gcc -std=gnu99 ./src/main.c  -Wall ./src/func.c -lCello -lDbgHelp -o ./dist/app.bin
