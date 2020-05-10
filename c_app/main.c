@@ -7,7 +7,13 @@ struct Example_struct {
 int main(int argc, char** argv) {
 
   const int x = 1;
+  unsigned int i=0;
 
+  for (i = 1; i < 11; ++i)
+  {
+    printf("%d ", i);
+  }
+  
   // Cello struct
   cello_struct();
 
@@ -80,7 +86,7 @@ var cello_struct(){
   ** cmp: 1
   ** hash: 2849275892l
   */ 
-  print("p0: %$\np1: %$\ncmp: %i\nhash: %ul\n", p0, p1, $I(cmp(p0, p1)), $I(hash(p0)));
+  print("\np0: %$\np1: %$\ncmp: %i\nhash: %ul\n", p0, p1, $I(cmp(p0, p1)), $I(hash(p0)));
 }
 
 /** Expected output
