@@ -96,6 +96,22 @@ A Documentation template is in `./doc` and will be updated !
 I implemented a basic assert method in tests to performs some tests on methods in `./src/func.c`, you just have to run :
 ```shell
 sh ./run_tests.sh
+
+# Expected ouutput :
+
+# [+] -----------------------------------------------
+# [+] Start tests...
+# [+] 
+# [+] > 'test_helloworld()' passed successfully,
+# [+] ===============================================
+# [+] Reports 1/1 tests passed !
+# [+] -----------------------------------------------
+```
+
+Otherwhise, you can use `cmocka`, an elegant unit testing framework for C with support for mock objects; install it by running:
+```shell
+# After installed clib
+clib install cmocka
 ```
 
 ## Bonus For building your own Clib
