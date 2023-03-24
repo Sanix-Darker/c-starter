@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
   {
     printf("%d ", i);
   }
-  
+
   // Cello struct
   cello_struct();
 
