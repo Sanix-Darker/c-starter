@@ -19,12 +19,15 @@ int main(int argc, char** argv) {
     // A Cello base function
     test_tables();
 
+    var x = new(Table, String, Int);
+    set(x, $S("Hello"), $I(1));
+    set(x, $S("World"), $I(2));
+
     try {
-        // Made an addition
-        printf("\n[x] try-cactch in C");
-    } catch (e in IOError) {
-        println("[+] Error occur...");
+      get(x, $S("Missing"));
+    } catch (e in KeyError) {
+      println("Got Exception: %$", e);
     }
 
-    return 1;
+    return 0;
 }

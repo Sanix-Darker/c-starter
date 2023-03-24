@@ -19,6 +19,7 @@ void test_function() {
 
 var test_tables(void) {
     var prices = new (Table, String, Int);
+
     set(prices, $S("Apple"), $I(12));
     set(prices, $S("Banana"), $I(6));
     set(prices, $S("Pear"), $I(55));
