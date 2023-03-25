@@ -7,7 +7,7 @@ A small and lightweight C starter application.
 - A Hight level programming based on [Cello](http://libcello.org/learn).
 - A package manager implemented with [CLib](https://github.com/clibs/clib).
 - A Basic unitTest with asserts.
-- A documentation template.
+- A documentation template (not up to date).
 
 ## Project tree
 
@@ -37,15 +37,22 @@ The project structure :
 Works only for Linux users (Ubuntu/Debian), you just have to run : 
 ```shell
 # First install cello
-sh ./cello_install.sh
+bash ./cello_install.sh
+
+# or
+make install-cello
 
 # Then install clib
-sh ./clib_install.sh
+# clib is a packet manager for c libraries
+bash ./clib_install.sh
 
-# TO search a C-library
+# or
+make install-clib
+
+# To search a C-library
 # clib search [package-name]
 # -
-# TO Install the C-library
+# To Install the C-library
 # clib install <user>/<repo>
 ```
 
@@ -58,32 +65,9 @@ sh ./build.sh
 # app.bin will be generated, now you can run it by hitting :
 ./dist/app.bin
 
-# or just run 
-sh ./run.sh
-```
-
-## Example
-
-```c
-#include "Cello.h"
-
-int main(int argc, char** argv) {
-
-  char name[30] = "";
-
-  print(">>> Enter your name :");
-  scanf("%s", &name);
-  printf("<<< Welcome %s", name);
-
-  println("");
-  return 1;
-}
-/** output
- * 
- * >>> Enter your name :sanix
- * <<< Welcome sanix
- *
- **/
+# or make run, will build and execute it
+make dev
+# replace dev by prod to have an optimized portable executable with no debug logs
 ```
 
 ## Documentation
@@ -95,7 +79,7 @@ A Documentation template is in `./doc` and will be updated !
 
 I implemented a basic assert method in tests to performs some tests on methods in `./src/func.c`, you just have to run :
 ```shell
-sh ./run_tests.sh
+bash ./run_tests.sh
 
 # Expected ouutput :
 

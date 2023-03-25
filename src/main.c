@@ -19,14 +19,14 @@ int main(int argc, char** argv) {
     // A Cello base function
     test_tables();
 
-    var x = new(Table, String, Int);
+    var x = new (Table, String, Int);
     set(x, $S("Hello"), $I(1));
     set(x, $S("World"), $I(2));
 
     try {
-      get(x, $S("Missing"));
+        get(x, $S("Missing"));
     } catch (e in KeyError) {
-      println("Got Exception: %$", e);
+        println("Got Exception: %$", e);
     }
 
     return 0;
